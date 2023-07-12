@@ -24,7 +24,7 @@ pipeline {
       steps{
         script {
           docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
-            dockerImage.push("5")
+            dockerImage.push("${BUILD_NUMBER}")
           }
         }
       }
